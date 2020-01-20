@@ -12,7 +12,10 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
-        use: "babel-loader?cacheDirectory",
+        use: [
+          "cache-loader",
+          "babel-loader?cacheDirectory"
+        ],
         exclude: [
           /node_modules/
         ]
