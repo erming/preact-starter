@@ -1,7 +1,13 @@
 import store from "../store";
 
-export const setText = (text) => {
+export const setFoo = (foo) => {
   store.setState({
-    text: text
+    foo: foo
+  });
+}
+
+export const setBar = (bar) => {
+  store.setState({
+    bar: bar
   });
 }

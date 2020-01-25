@@ -10,6 +10,14 @@ app.use(profile());
 app.use(express.static("dist"));
 app.use(express.static("public"));
 
+app.get("/favicon.*", (req, res) => {
+  res.sendStatus(204);
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(__dirname + "/public/index.html");
+})
+
 app.listen(port, () => {
   console.log("");
   console.log("Listening to port " + port);

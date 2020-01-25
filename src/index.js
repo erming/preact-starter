@@ -1,10 +1,4 @@
 import { render } from "preact";
-import { Provider } from "unistore/preact";
-import store from "./store";
-import { App } from "./components";
+import App from "./App";
 
-render((
-  <Provider store={store}>
-    <App/>
-  </Provider>
-), document.body);
+render(<App/>, document.body);
