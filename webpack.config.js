@@ -36,6 +36,9 @@ module.exports = {
   ],
   devtool: false,
   resolve: {
+    alias: {
+      "@": path.join(__dirname, "/src")
+    },
     extensions: [
       ".js",
       ".jsx"
