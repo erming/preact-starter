@@ -1,9 +1,10 @@
 const express = require("express");
 const compression = require("compression");
 const profile = require("response-time");
+const config = require("./config");
 
 const app = express();
-const port = 9000;
+const port = config.server.port;
 
 app.use(compression());
 app.use(profile());
@@ -16,7 +17,7 @@ app.get("/favicon.*", (req, res) => {
 
 app.get("*", (req, res) => {
   res.sendFile(__dirname + "/public/index.html");
-})
+});
 
 app.listen(port, () => {
   console.log("");

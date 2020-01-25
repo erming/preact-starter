@@ -1,5 +1,5 @@
-import { Provider } from "unistore/preact";
 import { Router } from "preact-router";
+import { Provider } from "unistore/preact";
 import store from "./store";
 import * as pages from "./pages"
 import "./App.css";
