@@ -1,5 +1,7 @@
 export default ({ text }) => {
   return (
-    <div>{text}</div>
+    <div class="app">
+      {text}
+    </div>
   );
 }

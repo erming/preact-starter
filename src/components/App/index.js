@@ -1,4 +1,6 @@
 import App from "./App";
+import "./App.css";
+
 import { connect } from "unistore/preact";
 
 const mapState = (state) => ({
