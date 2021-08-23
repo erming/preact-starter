@@ -1,4 +1,5 @@
 const path = require("path");
+const { ESBuildMinifyPlugin } = require("esbuild-loader");
 const { ProvidePlugin } = require("webpack");
 
 module.exports = {
@@ -12,10 +13,12 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
-        use: [
-          "cache-loader",
-          "babel-loader?cacheDirectory"
-        ],
+        loader: "esbuild-loader",
+        options: {
+          loader: "jsx",
+          target: "es6",
+          jsxFactory: "h"
+        },
         exclude: [
           /node_modules/
         ]
@@ -24,7 +27,14 @@ module.exports = {
         test: /\.css$/,
         use: [
           "style-loader",
-          "css-loader"
+          "css-loader",
+          {
+            loader: "esbuild-loader",
+            options: {
+              loader: "css",
+              minify: true
+            }
+          }
         ]
       }
     ]
@@ -35,6 +45,11 @@ module.exports = {
     })
   ],
   devtool: false,
+  optimization: {
+    minimizer: [
+      new ESBuildMinifyPlugin()
+    ]
+  },
   resolve: {
     alias: {
       "@": path.join(__dirname, "/src")

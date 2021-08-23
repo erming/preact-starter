@@ -1,23 +1,26 @@
 {
   "private": true,
   "license": "",
+  "scripts": {
+    "build": "webpack --mode production",
+    "watch": "webpack --watch"
+  },
   "dependencies": {
     "compression": "1.7.4",
     "express": "4.17.1",
     "response-time": "2.3.2"
   },
   "devDependencies": {
-    "@babel/core": "7.15.0",
-    "@babel/plugin-transform-react-jsx": "7.14.9",
-    "@babel/preset-env": "7.15.0",
     "babel-loader": "8.2.2",
     "cache-loader": "4.1.0",
     "css-loader": "6.2.0",
+    "esbuild-loader": "2.15.0",
     "preact": "10.5.14",
     "preact-router": "3.2.1",
     "style-loader": "3.2.1",
     "unistore": "3.5.2",
-    "webpack": "5.51.1"
+    "webpack": "5.51.1",
+    "webpack-cli": "4.8.0"
   },
   "nodemonConfig": {
     "ignore": [
