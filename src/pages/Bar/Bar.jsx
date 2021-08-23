@@ -1,5 +1,12 @@
-export default () => {
+import { Fragment } from "preact";
+import { Example } from "@/components";
+
+export default ({ bar }) => {
   return (
-    <div>Bar</div>
+    <Fragment>
+      <Example>
+        <div>{bar}</div>
+      </Example>
+    </Fragment>
   );
 }

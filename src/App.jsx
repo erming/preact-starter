@@ -1,8 +1,13 @@
 import { Router } from "preact-router";
 import { Provider } from "unistore/preact";
+import { setFoo, setBar } from "./actions";
 import store from "./store";
 import * as pages from "./pages"
 import "./App.css";
+import "./assets/css";
+
+setFoo("Foo");
+setBar("Bar");
 
 export default () => {
   return (
