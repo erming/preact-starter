@@ -21,7 +21,7 @@
     "preact-router": "3.2.1",
     "style-loader": "3.2.1",
     "unistore": "3.5.2",
-    "webpack": "5.51.1",
+    "webpack": "5.94.0",
     "webpack-cli": "4.8.0"
   },
   "nodemonConfig": {
